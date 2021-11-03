@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/publish/{topic}', [\App\Http\Controllers\TopicController::class, 'store'])->name('topics.store');
-Route::post('/subscribe/{topic}', [\App\Http\Controllers\SubscriberController::class, 'store'])->name('subscribers.store');
+Route::post('/publish/{topic}', [\App\Http\Controllers\TopicController::class, 'publish'])->name('topics.publish');
+Route::post('/subscribe/{topic}', [\App\Http\Controllers\SubscriberController::class, 'subscribe'])->name('subscribers.store');
 

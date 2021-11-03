@@ -36,9 +36,9 @@ class TopicSend implements ShouldQueue
      */
     public function handle()
     {
-         Http::post($this->url, [
+        Http::post($this->url, [
             'topic' => $this->topic,
-             'data'=>$this->data
+            'data'=>$this->data
         ]);
     }
 }
